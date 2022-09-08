@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_.css">
+    <link rel="stylesheet" href="style_.css">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script defer src="js/script.js"></script>
 </head>
@@ -15,7 +15,16 @@
         <main>
             <div class="container">
                 <section class="discs">
-                    
+                   <div v-for ="disc in discs">
+                       <div class="disc-container">
+                           <ul>
+                              <li><img class="poster" :src="disc.poster" :alt="disc.title"></li>
+                              <li><h3>{{disc.title}}</h3></li>
+                              <li><small>{{disc.author}}</small></li>
+                              <li>{{disc.year}}</li>
+                           </ul>
+                       </div>
+                   </div>
                 </section>
             </div>
         </main>

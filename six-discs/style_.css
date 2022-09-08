@@ -1,24 +1,22 @@
-.poster{
-    height: 150px;
-}
-
 li{
     list-style-type: none;
+    text-align: center;
+    color: lightgray;
 }
 
 .discs{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: #1E2D3B;
 }
- 
+
 .disc-container{
-    width: calc(100% / 3 - 20px);
+    
     margin: 10px;
     background-color: #2E3A46;
 }
 
-h2,p{
-   text-align: center;
-   color: lightgray;
+.poster{
+    height: 300px;
 }
